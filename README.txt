@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
+Contributors: hyperclock
 Donate link: https://hyperclock.eu
 Tags: comments, spam
 Requires at least: 3.0.1
@@ -8,107 +8,67 @@ Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+Quickly and efficiently create a highly-flexible Tutorial Area within your ClassicPress project.
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+As the name suggests, [King Tut](https://github.com/My-CP-Dev-Space/king-tut/) will allow you to create a tutorial section on your ClassicPress project.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+The plugin was born after I tried several free Knowledgebase plugins and themes out there and that couldn't fit my purpose. It's designed to be very easy to install and use out of the box and I'll be adding more features into the core and as addons.
 
-A few notes about the sections above:
+The plugin uses a custom post in conjunction with custom taxonomies to create and display your tutorials.
 
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
 
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
+= Main features: =
 
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+* Uses a custom post type `king_tut` with a slug of `ktut` ensuring your data always stays even if you choose to delete this plugin
+* Customizable permalinks: Archives are enabled so your knowledge base can be viewed at `/king-tut/` automatically on activation. You can change this in the Settings page
+* Uses Categories ( `ktcategory` ) to automatically draw up the tutorial area. You will need at least one category in order to display the tutorials.
+* Additionally tags ( `kt-tags` ) can also be used for each tutorial article
+* Shortcode `[kingtut]` will allow you to display the knowledge base on any page of your choosing
+* Breadcrumbs: Default templates include breadcrumbs. Alternatively, use functions or shortcode to display this where you want
+* Widgets: KTUT Articles, KTUT Sections and KTUT Breadcrumbs
+* Inbuilt styles that display the tutorial beautifully and are fully responsive - Uses the [Responsive Grid System](http://www.responsivegridsystem.com/)
+* Supports unlimited nested of categories
+* Inbuilt cache to speed up the display of your tutorial articles
+
+= Contribute =
+
+If you have an idea, I'd love to hear it. King Tut is also available on [Github](https://github.com/My-CP-Dev-Space/king-tut). You can [create an issue on the Github page](https://github.com/My-CP-Dev-Space/king-tut/issues) or, better yet, fork the plugin, add a new feature and send me a pull request.
+
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+= ClassicPress install (The easy way) =
 
-e.g.
+1. Navigate to “Plugins” within your ClassicPress Admin Area
+2. Click “Add new” and in the search box enter “King Tut”
+3. Find the plugin in the list (usually the first result) and click “Install Now”
+4. Activate or Network activate the Plugin in WP-Admin under the Plugins screen
 
-1. Upload `king-tut.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+= Manual install =
+
+Download the plugin
+1. Extract the contents of king-tut.zip to wp-content/plugins/ folder. You should get a folder called king-tut.
+2. Activate or Network activate the Plugin in WP-Admin under the Plugins screen
+3. Create a new page or edit an existing one and add the shortcode `[ktut]` to set up this page to display the tutorial
+4. Visit `King Tut &raquo; Add New` to add new Articles to the tutorial
+5. Visit `King Tut &raquo; Sections` to add new categories to the tutorials. Alternatively, you can add new categories from the meta box in the Add New page
+
+The plugin supports unlimited levels of category hierarchy, however, the recommended setting for creating the tutorial is to create a top level category with the name of the tutorial and sub-level categories for each section of this tutorial.
+
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
-
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
 
 == Changelog ==
 
-= 1.0 =
-* A change since the previous version.
-* Another change.
-
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
 
 == Upgrade Notice ==
 
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
 
 == Arbitrary section ==
 
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`
