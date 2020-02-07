@@ -1,12 +1,10 @@
 <?php
 
 /**
- * The plugin bootstrap file
+ * King Tut
  *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
+ * Quickly and efficiently create a highly-flexible Tutorial 
+ * Area within your ClassicPress project.
  *
  * @link              https://hyperclock.eu
  * @since             1.0.0

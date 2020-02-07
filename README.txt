@@ -27,7 +27,7 @@ The plugin uses a custom post in conjunction with custom taxonomies to create an
 * Additionally tags ( `kt-tags` ) can also be used for each tutorial article
 * Shortcode `[kingtut]` will allow you to display the knowledge base on any page of your choosing
 * Breadcrumbs: Default templates include breadcrumbs. Alternatively, use functions or shortcode to display this where you want
-* Widgets: KTUT Articles, KTUT Sections and KTUT Breadcrumbs
+* Widgets: King_Tut Articles, King_Tut Sections and King_Tut Breadcrumbs
 * Inbuilt styles that display the tutorial beautifully and are fully responsive - Uses the [Responsive Grid System](http://www.responsivegridsystem.com/)
 * Supports unlimited nested of categories
 * Inbuilt cache to speed up the display of your tutorial articles
